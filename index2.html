@@ -1,14 +1,13 @@
-
 <!DOCTYPE html>
 <html>
-  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   <body style='margin : 0px; overflow: hidden;'>
-	<a-scene embedded arjs='sourceType: webcam;'>
-        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-        <a-marker-camera type="pattern" url="https://felix-aivii.github.io/AR/pattern-marker.patt">
-        </a-marker>
-        </a-scene>    
+	<a-scene embedded arjs renderer='precision: medium;'>
+		<a-marker type="pattern" url="https://felix-aivii.github.io/AR/pattern-marker.patt">
+			<a-cone position='0 0.5 0' rotation="0 0 0" radius-bottom="0.5" material='opacity: 0.75; color: red;'></a-cone>
+		</a-marker>
+		<a-entity camera></a-entity>
+	</a-scene>
   </body>
 </html>
